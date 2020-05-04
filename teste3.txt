@@ -1,0 +1,4 @@
+((forall x (P(x))) -> (exists x (Q(x)))),
+(forall x (forall y ((exists z ((P(x, z)) && (P(y, z)))) -> (exists u (Q(x, y, u)))))),
+(exists x (forall y (forall z (exists u (forall v (exists w (P(x, y, z, u, v, w)))))))),
+(forall x (exists y (exists z (((~(P(x, y))) && (Q(x, z))) || (R(x, y, z))))))

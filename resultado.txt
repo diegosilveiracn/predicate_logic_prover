@@ -1,0 +1,27 @@
+Original wffs
+(forall x (forall y (exists z (P(x, y, z))))),
+(forall x (forall y (forall z (forall u (forall v (forall w (((P(x, y, u)) && ((P(x, z, v)) && (P(x, v, w)))) -> (P(u, z, w))))))))),
+((forall x (P(x, C, x))) && (forall x (P(f(x), x, C)))),
+(forall x ((P(x, f(x), C)) && (forall _x0 (P(f(_x0), _x0, C))))),
+((forall x (P(x, x, C))) -> (forall u (forall v (forall w ((P(u, v, w)) -> (P(v, u, w)))))))
+
+Wffs in prenex normal form
+(forall x (forall y (exists z (P(x, y, z))))),
+(forall x (forall y (forall z (forall u (forall v (forall w (((~P(x, y, u)) || ((~P(x, z, v)) || (~P(x, v, w)))) || (P(u, z, w))))))))),
+(forall x ((P(x, C, x)) && (P(f(x), x, C)))),
+(forall x (forall _x0 ((P(x, f(x), C)) && (P(f(_x0), _x0, C))))),
+(exists x (forall u (forall v (forall w ((~P(x, x, C)) || ((~P(u, v, w)) || (P(v, u, w))))))))
+
+Wffs in skolem normal form
+(forall x (forall y (P(x, y, _Sk_f0(x, y))))),
+(forall x (forall y (forall z (forall u (forall v (forall w (((~P(x, y, u)) || ((~P(x, z, v)) || (~P(x, v, w)))) || (P(u, z, w))))))))),
+(forall x ((P(x, C, x)) && (P(f(x), x, C)))),
+(forall x (forall _x0 ((P(x, f(x), C)) && (P(f(_x0), _x0, C))))),
+(forall u (forall v (forall w ((~P(_Sk_C0, _Sk_C0, C)) || ((~P(u, v, w)) || (P(v, u, w)))))))
+
+Wffs in conjunctive normal form
+(forall x (forall y (P(x, y, _Sk_f1(x, y))))),
+(forall x (forall y (forall z (forall u (forall v (forall w (((~P(x, y, u)) || ((~P(x, z, v)) || (~P(x, v, w)))) || (P(u, z, w))))))))),
+(forall x ((P(x, C, x)) && (P(f(x), x, C)))),
+(forall x (forall _x0 ((P(x, f(x), C)) && (P(f(_x0), _x0, C))))),
+(forall u (forall v (forall w ((~P(_Sk_C1, _Sk_C1, C)) || ((~P(u, v, w)) || (P(v, u, w)))))))

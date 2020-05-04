@@ -1,0 +1,8 @@
+(forall x ((P(x)) -> (forall y (Q(y))))),
+(forall x ((P(x)) && (forall x (Q(x))))),
+(forall x ((P(x)) <-> (exists y (Q(y))))),
+(forall x ((P(x)) || (exists x (Q(x))))),
+(~(forall x ((P(x)) -> (forall y (Q(y)))))),
+(~(forall x ((P(x)) && (forall x (Q(x)))))),
+(~(forall x ((P(x)) <-> (exists y (Q(y)))))),
+(~(forall x ((P(x)) || (exists x (Q(x))))))

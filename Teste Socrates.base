@@ -1,0 +1,2 @@
+(forall x ((HOMEM(x)) -> (MORTAL(x)))),
+(HOMEM(SOCRATES))

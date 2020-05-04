@@ -1,0 +1,5 @@
+(forall x (forall y (exists z (P(x, y, z))))),
+(forall x (forall y (forall z (forall u (forall v (forall w (((P(x, y, u)) && ((P(x, z, v)) && (P(x, v, w)))) -> (P(u, z, w))))))))),
+((forall x (P(x, C, x))) && (forall x (P(f(x), x, C)))),
+(forall x ((P(x, f(x), C)) && (forall x (P(f(x), x, C))))),
+((forall x (P(x, x, C))) -> (forall u (forall v (forall w ((P(u, v, w)) -> (P(v, u, w)))))))
